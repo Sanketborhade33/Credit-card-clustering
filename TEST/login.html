@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+</head>
+
+<body class="h-screen bg-cover bg-center bg-no-repeat flex justify-center items-center"
+    style="background-image: url('./bg2.jpg');">
+    <div class="bg-white bg-opacity-20 w-96 p-8 border border-white border-opacity-30 flex flex-col items-center rounded-lg backdrop-blur-lg">
+        <h1 class="text-5xl font-black font-sans text-gray-800 mb-10">Login</h1>
+
+        <form id="loginForm" action="/login" method="POST" class="w-full">
+            <div class="w-full mb-8">
+                <input type="text" name="username" placeholder="Username"
+                    class="w-full outline-none border-b-2 border-gray-300 bg-transparent text-xl py-2 mb-6 text-black placeholder-black focus:border-blue-500 hover:border-blue-500 transition-colors" required>
+
+                <input type="password" name="password" placeholder="Password"
+                    class="w-full outline-none border-b-2 border-gray-300 bg-transparent text-xl py-2 mb-6 text-black placeholder-black focus:border-blue-500 hover:border-blue-500 transition-colors" required>
+            </div>
+
+            <div class="w-full text-right mb-8">
+                <a href="#" class="text-white no-underline text-sm hover:text-gray-300 hover:underline">Forgot Password?</a>
+            </div>
+            
+            <a href="./index.html" type="submit" class="outline-none border border-black text-xl w-full py-3 rounded-full cursor-pointer font-mono bg-transparent hover:bg-gray-100 active:translate-y-0.5 mb-6 block text-center">
+                Login
+            </a>
+
+            <div class="text-lg">
+                Don't have an account? <a href="./register.html" class="text-white no-underline text-sm hover:text-gray-300 hover:underline">Register</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                const username = this.username.value;
+                const password = this.password.value;
+
+                if (!username || !password) {
+                    alert('Please fill in both fields.');
+                    event.preventDefault(); // Prevent form submission
+                }
+            });
+        });
+    </script>
+   
+   <script src="script.js"></script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-cover bg-center bg-no-repeat flex justify-center items-center"
+    style="background-image: url('./bg2.jpg');">
+    <div class="bg-white bg-opacity-20 w-96 p-8 border border-white border-opacity-30 flex flex-col items-center rounded-lg backdrop-blur-lg">
+        <h1 class="text-5xl font-black font-sans text-gray-800 mb-10">Login</h1>
+
+        <form id="loginForm" action="http://localhost:3001/login" method="POST" class="w-full">
+
+            <div class="w-full mb-8">
+                <input type="text" name="username" placeholder="Username"
+                    class="w-full outline-none border-b-2 border-gray-300 bg-transparent text-xl py-2 mb-6 text-black placeholder-black focus:border-blue-500 hover:border-blue-500 transition-colors" required>
+                
+                <input type="password" name="password" placeholder="Password"
+                    class="w-full outline-none border-b-2 border-gray-300 bg-transparent text-xl py-2 mb-6 text-black placeholder-black focus:border-blue-500 hover:border-blue-500 transition-colors" required>
+            </div>
+
+            <div class="w-full text-right mb-8">
+                <a href="#" class="text-white no-underline text-sm hover:text-gray-300 hover:underline">Forgot Password?</a>
+            </div>
+            
+            <button type="submit" class="outline-none border border-black text-xl w-full py-3 rounded-full cursor-pointer font-mono bg-transparent hover:bg-gray-100 active:translate-y-0.5 mb-6 block text-center">
+                Login
+            </button>
+        </form>
+            <div class="text-lg">
+                Don't have an account? <a href="./register.html" class="text-white no-underline text-sm hover:text-gray-300 hover:underline">Register</a>
+            </div>
+      
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                const username = this.username.value;
+                const password = this.password.value;
+
+                if (!username || !password) {
+                    alert('Please fill in both fields.');
+                    event.preventDefault(); // Prevent form submission
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>  -->
